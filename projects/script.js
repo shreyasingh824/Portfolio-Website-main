@@ -21,11 +21,11 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Projects | Portfolio Shreya Singh";
-            $("#favicon").attr("href", "/assets/images/");
+            $("#favicon").attr("href", "/assets/images/hero.png");
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "/assets/images/");
+            $("#favicon").attr("href", "/assets/images/hero.png");
         }
     });
 

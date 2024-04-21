@@ -1,0 +1,72 @@
+[
+ 
+  {
+    "name": "Shopping List App",
+    "desc": "Flutter application that allows users to create and manage shopping lists. ",
+    "image": "sp",
+    "category": "basicweb",
+    "links": {
+      "view": "https://github.com/shreyasingh824/shoppinglistapp/blob/main/trial.mp4",
+      "code": "https://github.com/shreyasingh824/shoppinglistapp"
+    }
+  },
+
+  {
+    "name": "Key Logger",
+    "desc": "Keyboard Recorder Chrome Extension.",
+    "image": "keylogger",
+    "category": "basicweb",
+    "links": {
+      "view": "https://www.youtube.com/watch?v=aDl5AU8EzaQ",
+      "code": "https://github.com/shreyasingh824/KeyLogger/tree/main"
+    }
+  },
+  {
+    "name": "WPA Passphrase Cracking",
+    "desc": "Python script for cracking a WPA passphrase.",
+    "image": "wifi",
+    "category": "basicweb",
+    "links": {
+      "view": "https://github.com/shreyasingh824/CrackWPAPassword",
+      "code": "https://github.com/shreyasingh824/CrackWPAPassword"
+    }
+  },
+  {
+    "name": "Expense tracker App",
+    "desc": "Flutter project to track the daily expenses.",
+    "image": "1",
+    "category": "basicweb",
+    "links": {
+      "view": "https://github.com/shreyasingh824/expensetracker/tree/main",
+      "code": "https://github.com/shreyasingh824/expensetracker/tree/main"
+    }
+  },
+  {
+    "name": "Drum Beat Play",
+    "desc": "Website using HTML,CSS,JS to play drum beat.",
+    "image": "drumplay",
+    "category": "basicweb",
+    "links": {
+      "view": "https://shreyasingh824.github.io/DrumPlayWebsite/",
+      "code": "https://github.com/shreyasingh824/DrumPlayWebsite"
+    }
+  },
+
+  {
+    "name": "Dice Game Website",
+    "desc": "Website using HTML,CSS,JS to play dice",
+    "image": "dice",
+    "category": "basicweb",
+    "links": {
+      "view": "https://shreyasingh824.github.io/DiceGameWebsite/",
+      "code": "https://github.com/shreyasingh824/DiceGameWebsite"
+    }
+  }
+  
+
+
+
+
+
+
+]

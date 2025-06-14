@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Shreya Singh</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><i class="fab fa-node-js"></i> Shreya</a>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a class="active" href="work.html">Work</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="work" id="work">
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+        <div class="box-container" id="projectsContainer">
+            <!-- Projects will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Function to load and display projects
+        async function loadProjects() {
+            try {
+                console.log('Loading projects...');
+                const response = await fetch('./projects/projects.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const projects = await response.json();
+                console.log('Projects loaded:', projects);
+                
+                const container = document.getElementById('projectsContainer');
+                if (!container) {
+                    throw new Error('Projects container not found!');
+                }
+                
+                let projectHTML = '';
+                projects.forEach(project => {
+                    projectHTML += `
+                        <div class="box tilt">
+                            <img draggable="false" src="${project.image}" alt="${project.name}" />
+                            <div class="content">
+                                <div class="tag">
+                                    <h3>${project.name}</h3>
+                                </div>
+                                <div class="desc">
+                                    <p>${project.description}</p>
+                                    <div class="btns">
+                                        ${project.live ? `<a href="${project.live}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>` : ''}
+                                        <a href="${project.github}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                container.innerHTML = projectHTML;
+                console.log('Projects rendered successfully');
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                const container = document.getElementById('projectsContainer');
+                if (container) {
+                    container.innerHTML = `<div class="error">Error loading projects: ${error.message}</div>`;
+                }
+            }
+        }
+
+        // Load projects when the page loads
+        window.addEventListener('load', loadProjects);
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html> 
